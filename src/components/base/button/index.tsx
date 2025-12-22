@@ -8,26 +8,38 @@ type ButtonProps = {
   size?: "small" | "medium" | "large"
 } & React.PropsWithChildren & React.HTMLAttributes<HTMLButtonElement>
 
+const btnBaseStyle = "rounded-full outline-none"
+
 const variants = {
   contained: {
     primary: "bg-primary-500 text-white",
     secondary: "bg-secondary-500 text-white",
+    sizes: {
+      small: "px-5 py-1 text-sm",
+      medium: "px-6 py-2 text-base",
+      large: "px-7 py-3 text-lg"
+    }
   },
   outlined: {
     primary: "border-2 border-primary-500 text-primary-500",
     secondary: "border-2 border-secondary-500 text-secondary-500",
+    sizes: {
+      small: "px-5 py-1 text-sm",
+      medium: "px-6 py-2 text-base",
+      large: "px-7 py-3 text-lg"
+    }
   },
   text: {
     primary: "text-gray-900",
     secondary: "text-gray-900",
+    sizes: {
+      small: "p-1 text-sm",
+      medium: "p-2 text-base",
+      large: "p-3 text-lg"
+    }
   },
 }
 
-const sizes = {
-  small: "px-2 py-1 text-sm",
-  medium: "px-4 py-4 text-base",
-  large: "px-6 py-6 text-lg"
-}
 
 
 export const Button: React.FC<ButtonProps> = ({
@@ -41,7 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       {...props}
       className={clsx(
-        "rounded-2xl", variants[variant][color], sizes[size]
+        btnBaseStyle, variants[variant][color], variants[variant].sizes[size]
       )}
     >
       {children}
