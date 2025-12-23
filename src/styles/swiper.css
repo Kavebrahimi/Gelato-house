@@ -1,0 +1,18 @@
+.swiper-button-next,
+.swiper-button-prev{
+  background-color: var(--color-primary-600);
+  padding: .5em;
+  border-radius: 5px;
+  top: 57% !important;
+}
+.swiper-button-prev{ left: -100px !important; }
+.swiper-button-next{ right: 16px; }
+.mySwiper{
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 40px;
+  --swiper-pagination: var(--color-secondary-500);
+  --swiper-pagination-color: var(--color-primary-500);
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-navigation-sides-offset: 20px;
+}
+

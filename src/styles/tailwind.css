@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './swiper.css';
 
 @theme {
   /* Primary */
@@ -26,4 +27,10 @@
   --color-secondary-800: #8c1395;
   --color-secondary-900: #74157a;
   --color-secondary-950: #4e0052;
+}
+
+@layer base {
+  body{
+    @apply bg-[#f9fafc]
+  }
 }
